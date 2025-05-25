@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animations */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.animate-breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+/* Custom styles */
+.gradient-primary {
+  @apply bg-gradient-to-b from-indigo-50 to-purple-100;
+}
+
+.gradient-sos {
+  @apply bg-gradient-to-b from-red-50 to-pink-50;
+}
+
+.gradient-journal {
+  @apply bg-gradient-to-b from-purple-50 to-indigo-50;
+}
+
+.btn-primary {
+  @apply bg-indigo-600 text-white py-4 px-6 rounded-xl flex items-center justify-center shadow-md hover:bg-indigo-700 transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-white text-indigo-600 py-4 px-6 rounded-xl flex items-center justify-center shadow-md border border-indigo-200 hover:bg-indigo-50 transition-colors;
+}
+
+.btn-sos {
+  @apply bg-red-600 text-white py-4 px-6 rounded-xl flex items-center justify-center shadow-md hover:bg-red-700 transition-colors;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-md p-4;
+}
+
+.card-hover {
+  @apply bg-white rounded-xl shadow-md p-4 hover:shadow-lg transition-shadow cursor-pointer;
+}
+
+.input-field {
+  @apply w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500;
+}
+
+/* Typography */
+h1 {
+  @apply text-2xl font-bold;
+}
+
+h2 {
+  @apply text-lg font-semibold;
+}
+
+/* Dark mode styles */
+.dark {
+  @apply bg-gray-900 text-white;
+}
+
+.dark .card {
+  @apply bg-gray-800 text-gray-100;
+}
+
+.dark .btn-secondary {
+  @apply bg-gray-800 text-indigo-400 border-gray-700;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
