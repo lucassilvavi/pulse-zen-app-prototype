@@ -17,6 +17,10 @@ import SOSSession from './pages/SOSSession';
 import Journal from './pages/Journal';
 import JournalEntry from './pages/JournalEntry';
 import Profile from './pages/Profile';
+import Sleep from './pages/Sleep';
+import SleepSession from './pages/SleepSession';
+import DailyInspiration from './pages/DailyInspiration';
+import MoodTracker from './pages/MoodTracker';
 
 const App: React.FC = () => {
   // Simple state to check if user has completed onboarding
@@ -51,6 +55,10 @@ const App: React.FC = () => {
           <Route path="/journal" element={<Journal />} />
           <Route path="/journal/entry" element={<JournalEntry />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/sleep" element={<Sleep />} />
+          <Route path="/sleep/session" element={<SleepSession />} />
+          <Route path="/daily-inspiration" element={<DailyInspiration />} />
+          <Route path="/mood-tracker" element={<MoodTracker />} />
         </Routes>
       </Layout>
     </Router>

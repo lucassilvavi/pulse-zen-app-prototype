@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, Calendar, Clock } from 'lucide-react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { Calendar } from 'lucide-react';
 
 const Journal: React.FC = () => {
   const navigate = useNavigate();

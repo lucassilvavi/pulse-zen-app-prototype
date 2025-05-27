@@ -38,7 +38,15 @@ const Home: React.FC = () => {
       
       {/* Daily Suggestion */}
       <section className="mb-8">
-        <h2 className="text-lg font-semibold text-indigo-800 mb-3">Sugestão do dia</h2>
+        <div className="flex justify-between items-center mb-3">
+          <h2 className="text-lg font-semibold text-indigo-800">Sugestão do dia</h2>
+          <button 
+            className="text-indigo-600 text-sm font-medium"
+            onClick={() => navigate('/daily-inspiration')}
+          >
+            Ver inspirações
+          </button>
+        </div>
         <div 
           className="bg-white rounded-xl shadow-md p-4"
           onClick={() => navigate('/breathing')}
@@ -93,7 +101,10 @@ const Home: React.FC = () => {
             <span className="text-purple-700 font-medium">Diário</span>
           </div>
           
-          <div className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center justify-center">
+          <div 
+            className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center justify-center"
+            onClick={() => navigate('/sleep')}
+          >
             <div className="bg-indigo-100 p-3 rounded-full mb-2">
               <Moon size={24} className="text-indigo-600" />
             </div>
